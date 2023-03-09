@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => BookCubit()),
+        BlocProvider(create: (context) => BookCubit()..getData()),
         BlocProvider(create: (context) => FavoriteBloc()),
       ],
       child: MaterialApp.router(

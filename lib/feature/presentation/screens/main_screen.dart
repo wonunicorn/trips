@@ -16,7 +16,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   final favoriteBooks = Boxes.getFavorites();
 
   void changeFavorite(BookModel book){
@@ -29,18 +28,6 @@ class _MainScreenState extends State<MainScreen> {
           favoriteBookModel: FavoriteBookModel(
               id: book.key, book: book)));
     }
-  }
-
-  @override
-  void initState() {
-    context.read<BookCubit>().getData();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    Boxes.getBooks().clear();
-    super.dispose();
   }
 
   @override
