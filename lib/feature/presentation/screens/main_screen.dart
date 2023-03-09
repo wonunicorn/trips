@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:test_task/feature/bloc/bloc.dart';
 import 'package:test_task/feature/service/boxes.dart';
 import 'package:test_task/feature/model/model.dart';
@@ -34,7 +33,6 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    context.read<BookCubit>().getBox();
     context.read<BookCubit>().getData();
     super.initState();
   }

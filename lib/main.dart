@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:test_task/feature/model/model.dart';
 import 'package:test_task/feature/bloc/bloc.dart';
-import 'package:test_task/utils/router.gr.dart' as appRoute;
+import 'package:test_task/utils/router.gr.dart' as route;
 
 void main() async{
   await Hive.initFlutter();
@@ -23,7 +23,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _appRouter = appRoute.AppRouter();
+  final _appRouter = route.AppRouter();
 
   @override
   void dispose() {

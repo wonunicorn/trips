@@ -29,10 +29,4 @@ class BookModel extends HiveObject{
     required this.imageUrl,
 });
 
-  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
-      author: json['author'],
-      title: json['title'],
-      description: json['description'],
-      publishedYear: json['publishedYear'],
-      imageUrl: json['imageUrl']);
 }
