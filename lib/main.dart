@@ -9,8 +9,7 @@ void main() async{
   await Hive.initFlutter();
   Hive.registerAdapter(BookModelAdapter());
   Hive.registerAdapter(FavoriteBookModelAdapter());
-  final box = await Hive.openBox<BookModel>('bookBox');
-  await box.clear();
+  await Hive.openBox<BookModel>('bookBox');
   await Hive.openBox<FavoriteBookModel>("favoritesBooks");
   runApp(const MyApp());
 }

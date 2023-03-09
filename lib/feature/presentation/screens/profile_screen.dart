@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:test_task/feature/presentation/widgets.dart';
 import 'package:test_task/utils/app_styles.dart';
 
-
-
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 

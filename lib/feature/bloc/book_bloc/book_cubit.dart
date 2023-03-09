@@ -17,6 +17,9 @@ class BookCubit extends Cubit<BookState>{
 
       final data = await ServiceClass().fetchData();
       final box = Boxes.getBooks();
+      if(box.isNotEmpty){
+        await box.clear();
+      }
 
       data['book'].forEach((value) {
         box.add(
