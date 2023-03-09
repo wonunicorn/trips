@@ -12,7 +12,7 @@ class BottomSheetWidget extends StatelessWidget {
     required this.imageUrl,
     required this.publishedYear,
     required this.iconPress,
-    required this.text
+    required this.textBool
   }) : super(key: key);
 
   final String imageUrl;
@@ -21,7 +21,7 @@ class BottomSheetWidget extends StatelessWidget {
   final String publishedYear;
   final String description;
   final Function iconPress;
-  final String text;
+  final bool textBool;
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,8 @@ class BottomSheetWidget extends StatelessWidget {
                   children: [
                     SvgPicture.asset('assets/icons/favorite.svg', color: AppStyles.bgColor,),
                     const SizedBox(width: 9.88,),
-                    Text(text,style: AppStyles.headLineStyle3.copyWith(color: AppStyles.bgColor, height: 1.4),)
+                    Text(textBool ? 'Добавить в избранное' : 'Удалить из избранного',
+                      style: AppStyles.headLineStyle3.copyWith(color: AppStyles.bgColor, height: 1.4),)
                   ],
                 ),
               ),

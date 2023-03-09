@@ -63,27 +63,20 @@ class _MainScreenState extends State<MainScreen> {
                                   backgroundColor: Colors.transparent,
                                   context: context,
                                   builder: (context) => BottomSheetWidget(
-                                    text: !favoriteBooks.containsKey(books[index].key) ? 'Добавить в избранное' : 'Удалить из избранного',
-                                    description: books[index].description,
-                                    author: books[index].author,
                                     title: books[index].title,
                                     imageUrl: books[index].imageUrl,
+                                    author: books[index].author,
                                     publishedYear: books[index].publishedYear,
-                                    iconPress: (){
-                                      changeFavorite(books[index]);
-                                    },
+                                    description: books[index].description,
+                                    textBool: !favoriteBooks.containsKey(books[index].key) ,
+                                    iconPress: () => changeFavorite(books[index]),
                                   ),
                                 );
                               },
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
+                              child: GreyCardContainer(
                                 height: 116,
                                 margin: const EdgeInsets.only(bottom: 12),
                                 padding: const EdgeInsets.only(top: 16, bottom: 16, left: 16, right: 25.87),
-                                decoration: BoxDecoration(
-                                  color: AppStyles.lightGreyColor,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,9 +90,7 @@ class _MainScreenState extends State<MainScreen> {
                                     IconButton(
                                       constraints: const BoxConstraints(),
                                       padding: EdgeInsets.zero,
-                                      onPressed: (){
-                                        changeFavorite(books[index]);
-                                      },
+                                      onPressed: () => changeFavorite(books[index]),
                                       icon: SvgPicture.asset(
                                         favoriteBooks.containsKey(books[index].key)
                                             ? 'assets/icons/favorite-fill.svg' : 'assets/icons/favorite.svg',
