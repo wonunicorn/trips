@@ -62,8 +62,9 @@ class _MainScreenState extends State<MainScreen> {
             return state.when(
                 initial: () => const Center(child: CircularProgressIndicator(),),
                 loading: () => const Center(child: CircularProgressIndicator(),),
-                error: (msg) => const Center(child: CircularProgressIndicator(),),
-                loaded: (books) => BlocBuilder<FavoriteBloc, FavoriteState>(
+                error: (msg) => Center(child: Text("Error $msg")),
+
+              loaded: (books) => BlocBuilder<FavoriteBloc, FavoriteState>(
                   builder: (context, state) {
                     return Expanded(
                       child: ListView.builder(
