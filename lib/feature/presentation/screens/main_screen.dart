@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void dispose() {
-    Hive.close();
+    Boxes.getBooks().clear();
     super.dispose();
   }
 

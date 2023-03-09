@@ -12,12 +12,24 @@ void main() async{
   final box = await Hive.openBox<BookModel>('bookBox');
   await box.clear();
   await Hive.openBox<FavoriteBookModel>("favoritesBooks");
-  runApp( MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   final _appRouter = appRoute.AppRouter();
+
+  @override
+  void dispose() {
+    Hive.close();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
