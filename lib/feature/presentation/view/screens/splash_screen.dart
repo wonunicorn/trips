@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Busy Reader', style: AppStyles.headLineStyle1),
+            Text('Busy Reader', style: AppStyles.headLineStyle1.copyWith(height: 2.5)),
             const SizedBox(height: 8,),
             Image.asset('assets/images/main-image.png'),
           ],

@@ -46,11 +46,11 @@ class BookCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: AppStyles.headLineStyle3,),
+                  Text(title, style: AppStyles.headLineStyle3.copyWith(height: 1.4),),
                   const SizedBox(height: 4,),
-                  Text(year, style: AppStyles.textStyle1,),
+                  Text(year, style: AppStyles.textStyle1.copyWith(height: 1.5),),
                   const SizedBox(height: 4,),
-                  Text(author, style: AppStyles.textStyle2,),
+                  Text(author, style: AppStyles.textStyle2.copyWith(height: 1.5),),
                 ],
               ),
             ],

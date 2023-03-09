@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:test_task/feature/presentation/view/screens.dart';
+import 'package:test_task/feature/presentation/view/widgets/bottom_sheet_widget.dart';
 import 'package:test_task/utils/app_styles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,10 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: AppStyles.bgColor,
-      appBar: AppBar(
-        backgroundColor: AppStyles.bgColor,
-        elevation: 0,
-      ),
       body: screens[currentTab],
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
