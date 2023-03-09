@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:test_task/feature/presentation/view/screens/home_screen.dart';
-import 'package:test_task/utils/app_styles.dart';
+import 'package:test_task/utils/router.gr.dart' as appRoute;
+//Box _bookBox;
 
 void main() {
-  runApp(const MyApp());
+  // await Hive.initFlutter();
+  // Hive.registerAdapter(BookModelAdapter());
+  //_bookBox = await Hive.openBox('bookBox');
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  final _appRouter = appRoute.AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
       title: 'Busy Reader',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-
     );
   }
 }

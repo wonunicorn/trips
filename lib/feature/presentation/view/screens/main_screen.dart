@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:test_task/feature/presentation/view/widgets.dart';
 import 'package:test_task/utils/app_styles.dart';
 
@@ -56,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
                       title: books[index]['title'],
                       iconPress: (){},
                       imageUrl: books[index]['imageUrl'],
-                      icon: Icons.favorite,
+                      icon: 'assets/icons/favorite.svg',
                       author: books[index]['author'],
                       year: books[index]['publishedYear'],
                     ),

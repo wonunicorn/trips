@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_task/utils/app_styles.dart';
 
 class BookCard extends StatelessWidget {
@@ -16,7 +17,7 @@ class BookCard extends StatelessWidget {
 
   final String imageUrl;
   final Function iconPress;
-  final IconData icon;
+  final String icon;
   final String title;
   final String year;
   final String author;
@@ -54,7 +55,7 @@ class BookCard extends StatelessWidget {
               ),
             ],
           ),
-          Icon(icon, color: AppStyles.redColor,),
+          SvgPicture.asset(icon, color: AppStyles.redColor,),
         ],
       ),
     );
