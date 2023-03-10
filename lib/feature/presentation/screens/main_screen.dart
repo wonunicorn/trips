@@ -90,6 +90,8 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                     IconButton(
                                       constraints: const BoxConstraints(),
+                                      splashColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
                                       padding: EdgeInsets.zero,
                                       onPressed: () => changeFavorite(books[index]),
                                       icon: SvgPicture.asset(
