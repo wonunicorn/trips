@@ -62,6 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                                 showModalBottomSheet(
                                   backgroundColor: Colors.transparent,
                                   context: context,
+                                  isScrollControlled: true,
                                   builder: (context) => BottomSheetWidget(
                                     title: books[index].title,
                                     imageUrl: books[index].imageUrl,
