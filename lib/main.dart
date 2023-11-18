@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_task/feature/bloc/bloc.dart';
+import 'package:test_task/feature/presentation/bloc/bloc.dart';
 import 'package:test_task/utils/router.gr.dart' as route;
-import 'package:flutter_localization/flutter_localization.dart';
 
 void main() async{
   runApp(const MyApp());

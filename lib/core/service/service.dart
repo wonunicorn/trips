@@ -1,7 +1,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:test_task/feature/model/trip_model/trip_info_model.dart';
+import 'package:test_task/data/model/trip_model/trip_info_model.dart';
 
 class ServiceClass{
   final _dio = Dio();

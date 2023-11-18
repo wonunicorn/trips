@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:test_task/feature/model/trip_model/trip_info_model.dart';
-import 'package:test_task/feature/model/trip_model/trip_model.dart';
-import 'package:test_task/feature/service/service.dart';
+import 'package:test_task/core/service/service.dart';
+import 'package:test_task/data/model/model.dart';
+import 'package:test_task/data/model/trip_model/trip_info_model.dart';
+
 
 part 'trip_event.dart';
 part 'trip_state.dart';

@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_task/feature/bloc/trip_bloc/trip_bloc.dart';
-import 'package:test_task/feature/model/trip_model/trip_model.dart';
+import 'package:test_task/data/model/trip_model/trip_model.dart';
+import 'package:test_task/feature/presentation/bloc/trip_bloc/trip_bloc.dart';
 import 'package:test_task/feature/presentation/components/text_filed.dart';
 import 'package:test_task/feature/presentation/components/trip_card_container.dart';
 import 'package:test_task/utils/app_styles.dart';
