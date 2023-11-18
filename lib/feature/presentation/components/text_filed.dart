@@ -15,7 +15,7 @@ class TextFieldContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 280,
+      width: 300,
       height: 50,
       decoration: BoxDecoration(
         color: AppStyles.backgroundColor,

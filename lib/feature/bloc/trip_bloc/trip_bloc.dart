@@ -1,5 +1,4 @@
 
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,10 +24,7 @@ class TripBloc extends Bloc<TripEvent, TripState>{
               event.tripCheck!.date
           );
 
-          // debugPrint('AAAAAAAAAAAAAA');
-          // debugPrint(data['trips']);
-
-          //emit(TripState.loaded());
+          emit(TripState.loaded(data));
         }
       }catch(error){
         emit(TripState.error(message: error.toString()));
