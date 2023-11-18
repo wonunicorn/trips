@@ -1,6 +1,6 @@
-export 'screens/favourites_screen.dart';
+export 'screens/tabs/trips_screen.dart';
 export 'screens/home_screen.dart';
-export 'screens/main_screen.dart';
-export 'screens/profile_screen.dart';
-export 'screens/search_screen.dart';
-export 'screens/splash_screen.dart';
+export 'screens/tabs/main_screen.dart';
+export 'screens/tabs/profile_screen.dart';
+export 'screens/tabs/create_trip_screen.dart';
+export 'screens/auth/splash_screen.dart';

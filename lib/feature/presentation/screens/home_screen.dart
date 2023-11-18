@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:test_task/feature/presentation/screens.dart';
 import 'package:test_task/utils/app_styles.dart';
 
@@ -16,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List screens = const [
     MainScreen(),
-    SearchScreen(),
-    FavouritesScreen(),
+    CreateTripScreen(),
+    TripsScreen(),
     ProfileScreen(),
   ];
 
@@ -27,20 +26,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: AppStyles.bgColor,
+      backgroundColor: AppStyles.backgroundColor,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
-          child: screens[currentTab],
-        ),
+        child: screens[currentTab],
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
-          color: AppStyles.bgColor,
+          color: AppStyles.backgroundColor,
           border: Border(
             top: BorderSide(
-              color: AppStyles.lightGreyColor,
+              color: AppStyles.backgroundColor,
               width: 3,
             ),
           ),
@@ -54,50 +50,50 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.transparent,
-          selectedItemColor: AppStyles.primaryColor,
+          selectedItemColor: AppStyles.greenColor,
           unselectedItemColor: AppStyles.greyColor,
-          unselectedLabelStyle: AppStyles.textStyle3,
+          unselectedLabelStyle: AppStyles.textStyle3.copyWith(color: AppStyles.greyColor),
           showUnselectedLabels: true,
-          iconSize: 40,
+          iconSize: 27,
           elevation: 0,
-          selectedLabelStyle: AppStyles.textStyle3.copyWith(color: AppStyles.primaryColor),
+          selectedLabelStyle: AppStyles.textStyle3.copyWith(color: AppStyles.greenColor),
           items: [
             BottomNavigationBarItem(
                 icon: Container(
                   margin: const EdgeInsets.only(bottom: 4),
-                  child: SvgPicture.asset('assets/icons/home.svg', color: AppStyles.primaryColor,),
+                  child: const Icon(Icons.search,),
                 ),
-                label: 'Главная',
+                label: 'Поиск',
                 activeIcon: Container(
                     margin: const EdgeInsets.only(bottom: 4),
-                    child: SvgPicture.asset('assets/icons/home-fill.svg', color: AppStyles.primaryColor,))
+                    child: const Icon(Icons.search)),
             ),
             BottomNavigationBarItem(
                 icon: Container(
                     margin: const EdgeInsets.only(bottom: 4),
-                    child: SvgPicture.asset('assets/icons/search.svg', color: AppStyles.greyColor,)),
-                label: 'Поиск',
+                    child: const Icon(Icons.add_circle_outline)),
+                label: 'Создать',
               activeIcon: Container(
                   margin: const EdgeInsets.only(bottom: 4),
-                  child: SvgPicture.asset('assets/icons/search.svg', color: AppStyles.primaryColor,))
+                  child: const Icon(Icons.add_circle_outline)),
             ),
             BottomNavigationBarItem(
                 icon: Container(
                     margin: const EdgeInsets.only(bottom: 4),
-                    child: SvgPicture.asset('assets/icons/favorite.svg', color: AppStyles.greyColor,)),
-                label: 'Избранное',
+                    child: const Icon(Icons.directions_bus_filled_outlined)),
+                label: 'Поездки',
               activeIcon: Container(
                   margin: const EdgeInsets.only(bottom: 4),
-                  child: SvgPicture.asset('assets/icons/favorite.svg', color: AppStyles.primaryColor,)),
+                  child: const Icon(Icons.directions_bus_filled_outlined)),
             ),
             BottomNavigationBarItem(
                 icon: Container(
                     margin: const EdgeInsets.only(bottom: 4),
-                    child: SvgPicture.asset('assets/icons/profile.svg', color: AppStyles.greyColor, )),
+                    child: const Icon(Icons.person_outline_outlined)),
                 label: 'Профиль',
               activeIcon: Container(
                   margin: const EdgeInsets.only(bottom: 4),
-                  child: SvgPicture.asset('assets/icons/profile-fill.svg', color: AppStyles.primaryColor,)),
+                  child: const Icon(Icons.person_outline_outlined)),
             ),
           ],
         ),
